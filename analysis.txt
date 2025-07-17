@@ -1,0 +1,26 @@
+After comparing the two model texts (train1.txt and train2.txt) to the 
+two unknown texts (unknown1.txt and unknown2.txt), I was successful in
+matching my model texts to my unknown texts. My train1.txt were the full
+lyrics to Mariah Carey's 1994 song, "All I Want For Christmas Is You," while
+my train2.txt was Clement Clarke Moore's 1823 poem, "A Visit from St. Nicholas."
+I compared these two texts to another song and another poem. My unknown1.txt 
+was Robert Frost's 1916 poem, "Christmas Trees," while my unknown2.txt was
+Jose Feliciano's 2014 song, "Feliz Navidad." While all four texts revolve 
+around the same theme of Christmas, my text ID model was successful in 
+recognizing how a song matches well with another song and a poem 
+matches well with another poem. Thus, train1.txt matched with unknown2.txt 
+and train2.txt matched with unknown1.txt. I predicted this would be the 
+case, and therefore I expected these results. To compare each model, 
+I used the compareTextWithModels function, which takes the sum of the 
+log probabilities of the words, word lengths, stems, sentence lengths, 
+and number of vowels sourced in each text file. If the sum of the log 
+probabilities of these variables is greater for one model than the other, 
+then that means it is a better match with the provided unknown text. 
+I inputted TM_Unk1.compareTextWithTwoModels(TM1, TM2) and 
+TM_Unk2.compareTextWithTwoModels(TM1, TM2) into the terminal as 
+a way to compare train1.txt and train2.txt with the first unknown text 
+and then again with the second unknown text. Overall, each of the four 
+texts used was written in a different time period (whether that be 
+a difference of a few decades or a century apart), yet my model was still
+able to match texts to one another (despite the similarities of all 
+texts not being prose and being Christmas themed).
